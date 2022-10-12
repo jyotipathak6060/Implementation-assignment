@@ -1,0 +1,29 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+  
+    int G[n];
+    for(int i=0;i<n;i++){
+        cin>>G[i];
+    }
+    for(int i=0;i<n;i++){
+            int a=((G[i]/5)+1)*5;
+            if(G[i]>=38){
+          if(abs(G[i]-a)<3)
+          G[i]=a;
+          else if(abs(G[i]-a)>=3)
+          G[i]=G[i];
+            }
+           else {
+           G[i]=G[i];
+           }
+        }
+    
+    
+    for(int i=0;i<n;i++){
+        cout<<G[i]<<endl;
+    }
+}
